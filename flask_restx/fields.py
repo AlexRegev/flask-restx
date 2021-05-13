@@ -862,7 +862,7 @@ class Wildcard(Raw):
                     # we are using pop() so that we don't
                     # loop over the whole object every time dropping the
                     # complexity to O(n)
-                    (objkey, val) = self._flat.pop()
+                    (objkey, val) = self._flat.pop(0)
                     if (
                         objkey not in self._cache
                         and objkey not in self.exclude
